@@ -1,7 +1,7 @@
 use std::io;
 
-fn main() {
-    
+
+fn sum(){
     let mut num1 = String::new();
     let mut num2 = String::new();
 
@@ -20,4 +20,34 @@ fn main() {
     
     let sum = num1 + num2;
     println!("The sum of {} and {} is: {}", num1, num2, sum);
+}
+fn num(){
+    let mut x=10;
+    print!("the value of x is: {}",x);
+    x=11;
+    print!("changed value of x id: {}",x);
+}
+fn newfn(){
+    let x=5;
+    let x=x+1;
+    {
+        let x=x*2;
+        print!("value of x inside the scope is: {x}");
+    }
+    print!("value of x outside the scope is: {x}");
+}
+fn greet(name: &str) {
+    println!("Hello, {}!", name);
+}
+
+
+fn main() {
+    // sum();
+    // num();
+    // newfn();
+    let mut name=String::new();
+    println!("what is your name");
+    io::stdin().read_line(&mut name).expect("error to take input");
+    greet(&name);
+   
 }
